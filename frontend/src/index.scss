@@ -84,6 +84,11 @@ header {
   .z {
     width: 20%;
   }
+  .search {
+    input {
+      background: $secBg;
+    }
+  }
 }
 
 footer {
