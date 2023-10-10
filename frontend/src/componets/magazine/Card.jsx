@@ -8,7 +8,7 @@ const Card = ({product}) => {
             {/*<p>{product.categoryId}</p>*/}
             {/*<p>{product.amount}</p>*/}
             <div className="title">
-                <img src={deff}/>
+                <img src={deff} alt="img"/>
                 {/*<p>{product.imagePath}</p>*/}
                 <p>{product.name}</p>
             </div>
