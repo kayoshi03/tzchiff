@@ -46,20 +46,78 @@ main {
   text-align: center;
   .wrapper {
     background: $secBg;
-    height: 100%;
-    padding: 20px 20px 0 20px;
+    //height: 100%;
+    padding: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
+  }
+  .teapage {
+    display: flex;
+
+    .image {
+      border-radius: 10px;
+      box-shadow: (4px 4px 4px rgba(0, 0, 0, 0.25));
+      img {
+        width: 400px;
+        height: 400px;
+        object-fit: none;
+      }
+    }
+    .info {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 50px;
+      .title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        margin-bottom: 20px;
+      }
+      .desc {
+        .colon {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+      .price {
+        display: flex;
+        .sell {
+          display: flex;
+          gap: 5px;
+        }
+      }
+    }
+  }
+  .col {
+    margin: 20px 0 20px 0;
+    font-size: 24px;
+    font-weight: 700;
   }
   h1 {
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    margin-bottom: 20px;
   }
   .cardList {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     width: 100%;
     .card {
       display: flex;
@@ -71,7 +129,11 @@ main {
       box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.25);
       height: 260px;
       max-width: 100%;
-      width: fit-content;
+      width: 400px;
+      .delete {
+        background-color: red;
+      }
+
       .title {
         display: flex;
         flex-direction: column;
@@ -91,6 +153,7 @@ main {
       .price {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 5px;
         width: 100%;
 
@@ -98,6 +161,11 @@ main {
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        .sell {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
         p {
           font-size: 20px;
           font-style: normal;

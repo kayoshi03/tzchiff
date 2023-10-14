@@ -61,9 +61,7 @@ const Chart = () => {
     return (
         <>
             <Line data={data} options={options}></Line>
-            {remainInvent.map((prod, index) => (
-                <li key={index}>{prod}</li>
-            ))}
+
         </>
     )
 }

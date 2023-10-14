@@ -16,8 +16,12 @@ const CatalogList = () => {
     useEffect(() => {
         FetchTea()
     }, [])
+    if(products.length === 0 ) {
+        return <p>Loading</p>
+    }
     return (
         <div className="cardList">
+
             {products.map((product) => (
                 <Card key={product.id} product={product}></Card>
             ))}

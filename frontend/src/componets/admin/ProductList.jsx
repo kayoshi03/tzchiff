@@ -1,7 +1,7 @@
 import Product from "./Product";
 import {useEffect, useState} from "react";
 import {AllTea} from "../../API/AllTea";
-
+import AddTea from "./AddTea";
 const ProductList = () => {
     const [products, setProducts] = useState([])
     const FetchTea = async () => {
@@ -13,16 +13,21 @@ const ProductList = () => {
             console.log(error)
         }
     }
+
     useEffect(() => {
         FetchTea()
     }, [])
     return (
-        <div className="cardList">
+        <>
+            <div className="cardList">
             {products.map((product) => (
-                <Product key={product.id} product={product}></Product>
+                <Product key={product.id} product={product} reset={FetchTea}></Product>
             ))}
+            </div>
+            <h1>Добавить товар</h1>
+            <AddTea reset={FetchTea}></AddTea>
+        </>
 
-        </div>
     )
 }
 export default ProductList

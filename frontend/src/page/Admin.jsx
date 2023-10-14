@@ -3,6 +3,7 @@ import Chart from "../componets/admin/Chart";
 import ProductList from "../componets/admin/ProductList";
 import {AllTea} from "../API/AllTea";
 
+
 const Admin = () => {
     const [products, setProducts] = useState(0)
     const FetchTea = async () => {
@@ -22,15 +23,14 @@ const Admin = () => {
     }, []);
     return (
         <div className="wrapper">
-            <h1>Список товаров</h1>
-            <ProductList/>
-            <h1>Статистика</h1>
-            <Chart></Chart>
-
-            <div>
+            <div className="col">
                 Количество товаров на складе: {products}
             </div>
+            <h1>Список товаров</h1>
+            <ProductList/>
 
+            <h1>Статистика</h1>
+            <Chart></Chart>
         </div>
     )
 }
